@@ -19,7 +19,7 @@ app.get('/',(req,res)=>{
     res.render("index");
 })
 app.get('/weather',(req,res)=>{
-    res.render("Weather");
+    res.render("weather");
 })
 app.get('/about',(req,res)=>{
     res.render("about");
