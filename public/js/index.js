@@ -15,7 +15,7 @@ let search =async(e)=>{
         displayBottom.classList.add('data-hidden')
     }
     else{
-        let url = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=79300dbfc63a02a3d6eea9278991af22`
+        let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=79300dbfc63a02a3d6eea9278991af22`
         loader.classList.add('loading');
         displayBottom.classList.add('data-hidden')
         try{
