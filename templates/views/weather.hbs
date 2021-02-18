@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{>HeaderLinks}}
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="short icon" href="images/logo.png">
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    {{>Navbar}}
+
+    
+    <form action="#" class="search-bar mx-auto my-5">
+    <input type="text" id="cityName" placeholder="Enter City Name" autocomplete="off"> 
+    <button id="citySearch">Search</button>
+    </form>
+
+    <div class="display-box">
+      <div class="display-top">
+        <span id="day">Friday</span>
+        <span id='date'>18 MAY</span>
+      </div>
+        <div class="display-middle" id="cityMsg">
+          Get Output Here...
+        </div>
+    <div id="loader"></div>
+        <div class="display-bottom data-hidden">
+          <div class="display-bottom-left">
+            <span id="temp" style="font-weight: bold;">23</span>&#176;C
+          </div>
+          <div class="display-bottom-right" id="tempStatus">
+            <i class="fas fa-cloud"></i>
+          </div>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+
+
+
+</body>
+</html>

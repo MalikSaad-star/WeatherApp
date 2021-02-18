@@ -1,0 +1,259 @@
+:root{
+    --main-bg:#1e272e;
+    --main-color:#0097e6;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.main-menu{
+    background-color: var(--main-bg);
+}
+.nav-link{
+    margin-left: 20px;
+}
+.navbar{
+    background-color: var(--main-bg);
+}
+nav h4{
+    display: inline-block;
+}
+nav a{
+    color: white;
+    
+}
+.navbar a:hover{
+    color: var(--main-color);
+}
+.navbar-toggler-icon{
+    background-color: grey;
+    color: grey;
+}
+
+.fa-snowflake{
+    animation: rot 3s linear infinite;
+    color: var(--main-color);
+}
+@keyframes rot{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+/* body */
+
+.inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.side-left span{
+    color: var(--main-color);
+}
+.side-right{
+    margin-top: 10vh;
+}
+.side-right img{
+    height: 70vh;
+}
+.side-right-about img{
+    margin-top: 10vh;
+    height: 70vh;
+    margin-left: 25%;
+}
+
+.error img{
+    width: 100%;
+    height: 70vh;
+}
+
+.search-bar{
+    display: flex;
+    width: 70%;
+    justify-content: center;
+    padding: 10px;
+}
+.search-bar input[type='text']{
+    margin: auto;
+    width: 100%;
+    margin-left: 5rem;
+    font-size: 24px;
+    padding: 10px 10px 10px 20px;
+    outline: none;
+    color: white;
+    border: 3px solid var(--main-color);
+    border-radius: 50px;
+    background-color: var(--main-bg);
+}
+::placeholder{
+    color: rgb(185, 179, 179);
+}
+.search-bar button{
+    /* width: 80px; */
+    height: 50px;
+    padding: 0 15px;
+    border-radius: 50px;
+    background-color: var(--main-color);
+    border: none;
+    outline: none;
+    color: white;
+    position: relative;
+    top: 6px;
+    border: 2px solid white;
+    right: 6.5rem;
+    font-size: 20px;
+    font-weight: bold;
+}
+.search-bar button:hover{
+    background-color: white;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+}
+
+.loading{
+    width: 50px;
+    height: 50px;
+    padding: 30px;
+    border-top: 3px solid var(--main-color);
+    border-right: 3px solid var(--main-color);
+    border-left: 3px solid var(--main-color);
+    border-bottom: 3px solid transparent;
+    position: relative;
+    top: 15%;
+    left: 40%;
+    border-radius: 50%;
+    animation: load 1s linear infinite;
+}
+
+@keyframes load{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.display-box{
+    width: 400px;
+    height: 270px;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: var(--main-bg);
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.display-top{
+    color: var(--main-bg);
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 30px;
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    /* background-color: rgb(104, 102, 102); */
+    background-color: var(--main-color);
+}
+.display-middle{
+    font-size: 24px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.display-bottom{
+    display: flex;
+    margin-top: auto;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+.display-bottom-left{
+    margin-top: auto;
+    font-size: 60px;
+}
+.display-bottom-right{
+    margin-top: auto;
+    font-size: 90px;
+}
+.data-hidden{
+    visibility: hidden;
+    transition: all 0.850ms linear;
+}
+
+
+@media screen and (max-width:768px){
+    .inner{
+        display: block;
+    }
+    .side-right{
+        margin-top: 5rem;
+        margin-bottom: 2rem;
+    }
+    .side-left{
+        margin-top: 5rem;
+        margin-bottom: 2rem;
+    }
+    .side-right-about img{
+        margin-top: 10vh;
+        height: 70vh;
+        
+    }
+    .search-bar{
+        width: 100%;
+        /* margin: 0; */
+    }
+    .search-bar input[type='text']{
+        width: 600px;
+        margin-left: 5rem;
+    }
+    .display-box{
+        width: 350px;
+    }
+    .display-bottom-left{
+        font-size: 50px;
+    }
+    .display-bottom-right{
+        font-size: 70px;
+    }
+   
+}
+@media screen and (max-width:400px){
+    .display-box{
+        width: 250px;
+    }
+    .display-bottom-left{
+        font-size: 38px;
+    }
+    .display-bottom-right{
+        font-size: 55px;
+    }
+    
+}
+@media screen and (max-width:280px){
+    .display-box{
+        width: 200px;
+    }
+}
+
+
+
+
+/* footer */
+footer{
+    background-color: var(--main-bg);
+    color: white;
+    margin-top: auto;
+    line-height: 2rem;
+    text-align: center;
+}
