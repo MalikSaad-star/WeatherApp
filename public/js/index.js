@@ -1,7 +1,8 @@
 let citySearch = document.getElementById('citySearch');
 let search =async(e)=>{
     e.preventDefault();
-    let cityName = document.getElementById('cityName').value;
+    let CityName = document.getElementById('cityName');
+    let cityName = CityName.value;
     let cityMsg = document.getElementById('cityMsg');
     let temperature = document.getElementById('temp');
     let tempStatus = document.getElementById('tempStatus');
@@ -53,6 +54,7 @@ let search =async(e)=>{
             else{
                 tempStatus.innerHTML ='<i class="fas fa-cloud"></i>'
             }
+            CityName.value = "";
             loader.classList.remove('loading');
             displayBottom.classList.remove('data-hidden');
         })
